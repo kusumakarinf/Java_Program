@@ -1,0 +1,86 @@
+package com.company;
+
+import com.sun.org.apache.xpath.internal.SourceTree;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+class emp{
+
+    int eid;
+    String ename;
+    int sal;
+
+    emp(int eid, String ename, int sal )
+    {
+        this.eid=eid;
+        this.ename=ename;
+        this.sal =sal;
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+
+
+        /*
+        Collection : dynamic size and data type
+        There are following inbuilt class :
+        i. ArrayList
+         */
+
+        ArrayList e = new ArrayList();
+        e.add(11);
+        e.add("sjhjsfshg");
+        e.add(4444);
+        e.add(true);
+
+        System.out.println(e.size());
+
+        e.remove(1);
+
+        for(int i=0; i<e.size();i++)
+        {
+            System.out.println(e.get(i));
+        }
+        ////  Template
+        ArrayList<Integer> i =new ArrayList<Integer>();
+        i.add(11);
+        //i.add("sjhsjhs");
+
+
+        ///
+        ArrayList<emp>  ee = new ArrayList<emp>();
+
+        ee.add(new emp(11,"raman",4444));
+        ee.add(new emp(21,"raman",4444));
+        ee.add(new emp(31,"raman",4444));
+        ee.add(new emp(41,"raman",4444));
+        ee.add(new emp(51,"raman",4444));
+
+
+        System.out.println(ee.size());
+
+        for(int j = 0; j<ee.size();j++)
+        {
+            System.out.println(ee.get(j).eid+"\t"+ee.get(j).ename);
+        }
+        ///
+        List l = new ArrayList();
+        l.add(11);
+        l.add("skjhjs");
+
+        //// dictionary : HashMap
+        HashMap map = new HashMap();
+        map.put("a","alpha");
+        map.put("b","beta");
+        map.put("c","cat");
+        map.put("t","tata");
+
+        System.out.println(map.get("a"));
+
+    }
+}
